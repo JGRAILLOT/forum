@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const path = require("path");
 const fs = require("fs");
-const Image = require("./models/image"); // Assuming you have an Image model
+const Image = require("./models/image");
 
 // Import routers
 const voteRouter = require("./routes/voteRoutes");
@@ -82,7 +82,5 @@ const createDefaultProfileImage = async () => {
 // Start the server
 app.listen(PORT, async () => {
   console.log(`Server is running on port ${PORT}`);
-
-  // Create the default profile image when the server starts
   await createDefaultProfileImage();
 });

@@ -153,7 +153,6 @@ class UserController {
   }
   async passwordVerification(userId, password) {
     try {
-      // Check if oldPassword is undefined or null
       if (password === undefined || password === null) {
         return { isCorrect: false };
       }

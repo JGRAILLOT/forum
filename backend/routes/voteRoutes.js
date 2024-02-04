@@ -4,7 +4,6 @@ const voteController = require("../controllers/voteController");
 
 const voteRouter = express.Router();
 
-// Add a new vote or update an existing vote
 voteRouter.post("/votes", async (req, res) => {
   const { postId, userId, value } = req.body;
 
@@ -16,7 +15,6 @@ voteRouter.post("/votes", async (req, res) => {
   }
 });
 
-// Delete a vote
 voteRouter.delete("/votes/:postId/:userId", async (req, res) => {
   const { postId, userId } = req.params;
 
@@ -32,7 +30,6 @@ voteRouter.delete("/votes/:postId/:userId", async (req, res) => {
   }
 });
 
-// Get vote count for a post
 voteRouter.get("/votes/count/:postId", async (req, res) => {
   const { postId } = req.params;
 

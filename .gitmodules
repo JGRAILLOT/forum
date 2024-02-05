@@ -1,3 +1,0 @@
-[submodule "backend/front-end"]
-	path = backend/front-end
-	url = https://github.com/JGRAILLOT/forum_graillot.git

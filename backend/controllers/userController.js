@@ -27,7 +27,7 @@ class UserController {
   async modifyAvatar(userId, newAvatar) {
     try {
       await User.findByIdAndUpdate(userId, {
-        newAvatar,
+        avatar: newAvatar,
       });
     } catch (error) {
       console.error(error.message);

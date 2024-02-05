@@ -121,7 +121,7 @@ class UserController {
         username,
         email,
         password: hashedPassword,
-        picture: image,
+        picture: image._id,
       });
 
       const savedUser = await newUser.save();
